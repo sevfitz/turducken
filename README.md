@@ -1,14 +1,17 @@
 # turducken
 
-1. Team Name: Chums
-2. Team Members:
+## Team Name: Chums
+
+## Team Members:
 * Haley
 * Cynthia
 * Mark
 * Stephanie
-3. Pitch:
 
-4. Domain Modeling ~ Objects:
+## Pitch:
+Turducken is an app that allows users to view three forms of their social media posts from one place. Users can create posts from Turducken and see them in their Turducken Dashboard as well as push these posts into their associated social media sites. 
+
+## Domain Modeling ~ Objects:
 * User
   * Name - first: string
   * Name - last: string
