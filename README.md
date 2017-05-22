@@ -10,11 +10,11 @@
 
 4. Domain Modeling ~ Objects:
 * User
-** Name - first: string
-** Name - last: string
-** User ID: string  // Stretch
-** Username: string (for turducken account)
-** Email: string   // Stretch
+- Name - first: string
+- Name - last: string
+- User ID: string  // Stretch
+- Username: string (for turducken account)
+- Email: string   // Stretch
 ** Password: string
 ** Image: string(url)
 ** SM Accounts: [strings]
