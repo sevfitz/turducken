@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+}
+
+img {
+    width: 20%;
+}
+
+.prePosts {
+    float: right;
+}
+
+p {
+    border: black solid;
+    padding: 15px;
+
+}
