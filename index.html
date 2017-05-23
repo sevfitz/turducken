@@ -16,31 +16,34 @@
             <li>Logout</li>
         </ul>
     </nav>
-    <section id="side-column">
-        <section id="dash-bio-section">
-            <div id="dash-pic"></div>
-            <p id="username"></p>
-            <p id="dash-blurb"></p>
-        </section> <!-- End of dash-bio-section -->
-        <section id="form-wrapper">
-            <form action="" method="POST">
-                <fieldset>
-                    <legend>New Post</legend>
-                    <label for=""></label>
-                    <select name="Social Media Options">
-                        <option value="facebook">Facebook</option>
-                        <option value="twitter">Twitter</option>
-                        <option value="instagram">Instagram</option>
-                    </select>
-                    <label for=""></label>
-                    <input type="text">
-                </fieldset>
-            </form>
-        </section> <!-- End of form-wrapper -->
-    </section> <!-- End of side-column -->
-    <main>
-        <div class="stream"></div>
-    </main>
+    <section id="dash-wrapper">
+        <section id="side-column">
+            <section id="dash-bio-section">
+                <div id="dash-pic">(Fill in the image here)</div>
+                <p id="username">(Put the username here)</p>
+                <p id="dash-blurb">(Put the bio blurb here)</p>
+            </section> <!-- End of dash-bio-section -->
+            <section id="form-wrapper">
+                <form action="" method="POST">
+                    <fieldset>
+                        <legend>New Post</legend>
+                        <label for=""></label>
+                        <select name="Social Media Options">
+                            <option value="facebook">Facebook</option>
+                            <option value="twitter">Twitter</option>
+                            <option value="instagram">Instagram</option>
+                        </select>
+                        <label for="content">Post Content: </label>
+                        <textarea name="content" id="" cols="50" rows="10" spellcheck="true" placeholder="Write your new post content here."></textarea>
+                        <input type="submit">
+                    </fieldset>
+                </form>
+            </section> <!-- End of form-wrapper -->
+        </section> <!-- End of side-column -->
+        <main>
+            <div class="stream">(This is where the stream will be)</div>
+        </main>
+    </section> <!-- End of dash-wrapper -->
     <footer>
         <ul>
             <li>&copy; 2017 Team Chums</li>
