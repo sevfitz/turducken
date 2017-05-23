@@ -1,0 +1,51 @@
+html, body {
+    font-family: arial;
+    margin: 0 2%;
+    width: 95%;
+    height: 600px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#dash-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#side-column {
+    width: 35%;
+    height: 600px;
+    border: solid 1px blue;
+    order: 1;
+}
+
+#dash-bio-section {
+    height: 200px;
+    width: 100%;
+    border: solid 1px black;
+    margin: 0 0 20% 0;
+}
+
+nav ul, footer ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border: solid 1px black;
+    height: 15%;
+    width: 100%;
+}
+
+main {
+    border: solid 1px green;
+    height: 600px;
+    width: 65%;
+    order: 2;
+    margin: 0 0 0 5%;
+}
