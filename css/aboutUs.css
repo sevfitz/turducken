@@ -1,0 +1,16 @@
+img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+#team {
+    display: flex;
+    justify-content: space-between;
+}
+
+.member {
+    width: 25%;
+    padding: 10px;
+}
