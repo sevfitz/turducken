@@ -2,7 +2,7 @@
 
 //init
 var posts = [];
-var postNumCounter;
+var postIdCounter;
 populate(); //in mockData.js
 
 function User( fName, lName, uName, img ) {
@@ -30,3 +30,10 @@ function postHandler ( ) {
     var post = new Post( content, author, socMedia );
     posts.push( newPost );
 }
+
+function init(){
+  document.getElementById("name").addEventListener("input", validateName);
+//document.getElementById("pass").addEventListener("input", validatePassword);
+}
+
+window.addEventListener("load", init);
