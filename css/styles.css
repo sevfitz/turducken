@@ -33,6 +33,21 @@ li {
     margin: 0 0 20% 0;
 }
 
+#login-form {
+    height: 600px;
+    width: 200px;
+    margin: 40% 40%;
+}
+
+#login-form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form input {
+    margin: 5% 5%;
+}
+
 nav ul, footer ul {
     display: flex;
     justify-content: space-around;
