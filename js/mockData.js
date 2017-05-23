@@ -1,14 +1,17 @@
 // populate Users and Posts
 
-function populate( ) {
-    var user1 = new User( 'John', 'Doe', 'johndoe', image1 );   
-    var user2 = new User( 'Jane', 'Doe', 'janedoe', image2 );
-    var post1 = new Post( 'content1', 'johndoe', 'instagram' );
-    var post2 = new Post( 'content2', 'janedoe', 'facebook' );
+function populate() {
+    var user1 = new User('John', 'Doe', 'johndoe', image1);
+    var user2 = new User('Jane', 'Doe', 'janedoe', image2);
+    var post1 = new Post('content1', 'johndoe', 'instagram');
+    var post2 = new Post('content2', 'janedoe', 'facebook');
     // create through post12
 }
 
-var postOne = new Post('Sometimes I have an existential crisis when making a sandwich because isn’t life just a giant sandwich?', 'BensonWigglepuff', 'twitter' );
+
+// MOCK POSTS THAT WILL APPEAR IN STREAM \\
+
+var postOne = new Post('Sometimes I have an existential crisis when making a sandwich because isn’t life just a giant sandwich?', 'BensonWigglepuff', 'twitter');
 var postTwo = new Post('https://static.independent.co.uk/s3fs-public/styles/story_medium/public/thumbnails/image/2015/11/30/19/puggle.jpg', 'BensonWigglepuff', 'instagram');
 var postThree = new Post('I ate an entire jar of mayonnaise and I don’t feel so good.  Mom said that eating a jar of mayonnaise isn’t okay but she doesn’t get it.', 'BensonWigglepuff', 'facebook');
 var postFour = new Post('You guys, I just made the best breakfast ever. It was super simple, you can make it with your kids and you’ll look like a superstar. Here’s the recipe: http://www.foodnetwork.com/recipes/ree-drummond/perfect-french-fries-recipe2-2120420', 'BensonWigglepuff', 'facebook');
