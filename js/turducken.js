@@ -9,6 +9,7 @@ function User( fName, lName) {
 
 User.prototype.newPost = function( content, socMedia ) {
     this.posts.push( new Post( content, socMedia ));
+    pushToLocalStorage( this );
 }
 
 
@@ -46,4 +47,7 @@ function init(){
     getFromLocalStorage( bensonwigglepuff );
 }
 
-window.addEventListener("load", init);
+var whatever = document.getElementById("login-form");
+whatever.addEventListener("submit", init);
+
+var anotherone = document.getElementById(" ")
