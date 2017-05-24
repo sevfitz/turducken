@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <title>Turducken Dashboard</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>(Turducken Logo)</li>
+            <li>Profile</li>
+            <li>Settings</li>
+            <li>Logout</li>
+        </ul>
+    </nav>
+    <section id="dash-wrapper">
+        <section id="side-column">
+            <section id="dash-bio-section">
+                <div id="dash-pic">(Fill in the image here)</div>
+                <p id="username">(Put the username here)</p>
+                <p id="dash-blurb">(Put the bio blurb here)</p>
+            </section>
+            <!-- End of dash-bio-section -->
+            <section id="form-wrapper">
+                <form action="" method="POST">
+                    <fieldset>
+                        <legend>New Post</legend>
+                        <label for=""></label>
+                        <select name="Social Media Options">
+                            <option value="facebook">Facebook</option>
+                            <option value="twitter">Twitter</option>
+                            <option value="instagram">Instagram</option>
+                        </select>
+                        <label for="content">Post Content: </label>
+                        <textarea name="content" id="" cols="50" rows="10" spellcheck="true" placeholder="Write your new post content here."></textarea>
+                        <input type="submit">
+                    </fieldset>
+                </form>
+            </section>
+            <!-- End of form-wrapper -->
+        </section>
+        <!-- End of side-column -->
+        <main>
+            <div class="row">
+                <div id="cards-container" class="col s12 cards-container">
+                    
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <img src="images/sample1.jpg">
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+    <!-- End of dash-wrapper -->
+    <footer>
+        <ul>
+            <li>&copy; 2017 Team Chums</li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="fake-social-media.html">Quick Link to Mock Data</a></li>
+        </ul>
+    </footer>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/turducken.js"></script>
+    <script src="js/mockData.js"></script>
+    <script src="js/twitter.js"></script>
+</body>
+
+</html>
