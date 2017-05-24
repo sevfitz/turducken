@@ -1,7 +1,8 @@
 "use strict"
 
+var bensonwigglepuff = new User('Benson', 'WigglePuff');
+
 function populate() {
-    var bensonwigglepuff = new User('Benson', 'WigglePuff');
     console.log (bensonwigglepuff);
 
     // POSTS THAT WILL APPEAR IN STREAM \\
@@ -31,5 +32,7 @@ function populate() {
     bensonwigglepuff.posts.push( new Post('Tfw Code Fellows PDX is the best place ever.',  'twitter'));
 
     console.log('populate - done!');
+    
+
 
 }
