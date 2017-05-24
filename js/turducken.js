@@ -7,10 +7,14 @@ function User( fName, lName) {
     this.posts = [];
 }
 
- User.prototype.render = function () {
+User.prototype.newPost = function( content, socMedia ) {
+    this.posts.push( new Post( content, socMedia ));
+}
+
+User.prototype.render = function() {
     console.table( this.posts );
 //     var row = document.createElement( 'tr' );
-//   //  createCell( 'td', this.posts.content, row );
+//     createCell( 'td', this.posts.content, row );
 //     for (var i = 0; i < times.length; i++) {
 //         createCell( 'td', this.posts.content, row );
 //     }
@@ -23,18 +27,15 @@ function User( fName, lName) {
 //     row.appendChild( cell );
 // }
 
-function Post( content, author, socMedia ){
+function Post( content, socMedia ){
     this.content = content;
     this.socMedia = socMedia;
     this.time = new Date().getTime();
 }
 
 function init(){
-    // document.getElementById("uName").addEventListener("input", populate);
     populate();
     bensonwigglepuff.render();
 }
 
 window.addEventListener("load", init);
-
-
