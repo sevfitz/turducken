@@ -11,6 +11,22 @@ User.prototype.newPost = function( content, socMedia ) {
     this.posts.push( new Post( content, socMedia ));
 }
 
+function pushToLocalStorage( user ) {
+    var userString = JSON.stringify( user );
+    localStorage.setItem('user', userString);
+    console.log("pushed " + userString);
+}
+
+function getFromLocalStorage( ) {
+    var userString = localStorage.getItem('user');
+
+    var user = JSON.parse(userString);
+
+    if ( user ){
+        console.log( user.posts);
+    };
+}
+
 User.prototype.render = function() {
     console.table( this.posts );
 //     var row = document.createElement( 'tr' );
@@ -36,6 +52,8 @@ function Post( content, socMedia ){
 function init(){
     populate();
     bensonwigglepuff.render();
+    pushToLocalStorage( bensonwigglepuff );
+    getFromLocalStorage( bensonwigglepuff );
 }
 
 window.addEventListener("load", init);
