@@ -63,4 +63,5 @@ main {
     width: 65%;
     order: 2;
     margin: 0 0 0 5%;
+    overflow: scroll;
 }
