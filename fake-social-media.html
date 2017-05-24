@@ -10,9 +10,19 @@
 </head>
 
 <body>
-  <div id="posts">
+  <div id="tPosts">
     <h1> Fake Twitter </h1>
+    <div class="imgAndText">
     <img src="./images/bw.jpg" alt="puggle">
+    <form action="" method="POST">
+      <fieldset>
+        <legend>Tweet</legend>
+        <label for="content">Post Content: </label>
+        <textarea id="textArea" name="content" cols="25" rows="10" spellcheck="true" placeholder="Write your new post content here." maxlength="140"></textarea>
+        <input id="twitterBut" type="submit">
+      </fieldset>
+    </form>
+    </div>
     <div class="prePosts">
       <p> My name is Benson and I like to party. </p>
       <p> I like to take naps and eat things I steal from the counter. </p>
@@ -25,7 +35,7 @@
 
 
     <script src="js/turducken.js"></script>
-    <script src="js/objects.js"></script>
+    <script src="js/twitter.js"></script>
     <script src="js/mockData.js"></script>
 </body>
 
