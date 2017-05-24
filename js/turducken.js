@@ -9,6 +9,18 @@ function User( fName, lName) {
 
 User.prototype.newPost = function( content, socMedia ) {
     this.posts.push( new Post( content, socMedia ));
+    pushToLocalStorage( this );
+}
+
+
+User.prototype.render = function() {
+    console.table( this.posts );
+}
+
+function Post( content, socMedia ){
+    this.content = content;
+    this.socMedia = socMedia;
+    this.time = new Date().getTime();
 }
 
 function pushToLocalStorage( user ) {
@@ -27,27 +39,6 @@ function getFromLocalStorage( ) {
     };
 }
 
-User.prototype.render = function() {
-    console.table( this.posts );
-//     var row = document.createElement( 'tr' );
-//     createCell( 'td', this.posts.content, row );
-//     for (var i = 0; i < times.length; i++) {
-//         createCell( 'td', this.posts.content, row );
-//     }
-//     table.appendChild( row );
- }
-
-// function createCell( cellType, content, row ) {
-//     var cell = document.createElement( cellType );
-//     cell.innerText = content;
-//     row.appendChild( cell );
-// }
-
-function Post( content, socMedia ){
-    this.content = content;
-    this.socMedia = socMedia;
-    this.time = new Date().getTime();
-}
 
 function init(){
     populate();
@@ -56,4 +47,7 @@ function init(){
     getFromLocalStorage( bensonwigglepuff );
 }
 
-window.addEventListener("load", init);
+var whatever = document.getElementById("login-form");
+whatever.addEventListener("submit", init);
+
+var anotherone = document.getElementById(" ")
