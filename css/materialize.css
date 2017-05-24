@@ -3,6 +3,12 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+
+ /* Project turducken additons */
+
+
+
+
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -2005,6 +2011,7 @@
 
 .blue-grey.darken-1 {
   background-color: #546e7a !important;
+  max-height: 200;
 }
 
 .blue-grey-text.text-darken-1 {
@@ -4436,7 +4443,7 @@ html {
 
 @media only screen and (min-width: 0) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -4674,7 +4681,7 @@ small {
 
 .card-panel {
   transition: box-shadow .25s;
-  padding: 24px;
+  padding: 5px;
   margin: 0.5rem 0 1rem 0;
   border-radius: 2px;
   background-color: #fff;
@@ -4777,6 +4784,9 @@ small {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+          max-height: 200px;
+          margin: 2px;
+          padding: 2px;
 }
 
 .card.sticky-action .card-action {
@@ -4809,17 +4819,18 @@ small {
   bottom: 0;
   left: 0;
   max-width: 100%;
-  padding: 24px;
+  padding: 5px;
 }
 
 .card .card-content {
-  padding: 24px;
+  padding: 5px;
   border-radius: 0 0 2px 2px;
 }
 
 .card .card-content p {
-  margin: 0;
+  margin: 10px;
   color: inherit;
+
 }
 
 .card .card-content .card-title {
@@ -4836,7 +4847,7 @@ small {
   position: relative;
   background-color: inherit;
   border-top: 1px solid rgba(160, 160, 160, 0.2);
-  padding: 16px 24px;
+  /*padding: 5px;*/
 }
 
 .card .card-action:last-child {
@@ -4854,8 +4865,12 @@ small {
   color: #ffd8a6;
 }
 
+.card-action {
+  height: 30px; width: 100%; margin: 0px; padding: 0px; font-size: 10px; text-align: right
+}
+
 .card .card-reveal {
-  padding: 24px;
+  padding: 5px;
   position: absolute;
   background-color: #fff;
   width: 100%;
@@ -6774,9 +6789,9 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 
 /* Select Field
    ========================================================================== */
-/*select {
+select {
   display: none;
-}*/
+}
 
 select.browser-default {
   display: block;
