@@ -1,5 +1,17 @@
 'use strict';
 
+function pushToLocalStorage( user ) {
+    var userString = JSON.stringify( user );
+    localStorage.setItem('user', userString);
+    // console.log('pushed ' + userString);
+}
+
+function getFromLocalStorage( ) {
+    var userString = localStorage.getItem('user');
+    var user = JSON.parse(userString);
+    return user;
+}
+
 // Create a new Post from the dashboard
 
 var turPostEl = document.getElementById('turTextArea');
