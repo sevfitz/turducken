@@ -24,7 +24,7 @@ function saveToStorage(post) {
 
 
 var tweet = JSON.parse(localStorage.getItem('tweet'));
-console.log(bensonwigglepuff,'is here');
+console.log(bensonwigglepuff + ' is here');
 bensonwigglepuff.posts.push(new Post(tweet, 'Twitter'));
 
 // End of Fake Twitter Section
