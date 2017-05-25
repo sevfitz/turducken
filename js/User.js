@@ -20,62 +20,82 @@ User.prototype.render = function () {
 
     var cardStream = document.getElementById('cards-container');
     var currentUser = bensonwigglepuff;
-    
+
 
     for (var i = 0; i < currentUser.posts.length; i++) {
-        
-        var ele1 = document.createElement('div');
-        // ele1.setAttribute('id', i + '.1');
-        ele1.setAttribute('class', 'card blue-grey darken-1');
 
-        var ele2 = document.createElement('div');
-        // ele2.setAttribute('id', i + '.2');
-        ele2.setAttribute('class', 'card-content white-text');
-
-        var ele3 = document.createElement('p');
-        // ele3.setAttribute('id', i + '.3');
         var currentPost = this.posts[i];
-        console.log('currentPost: ' + currentPost.content);
-        var node = document.createTextNode(currentPost.content);
-        ele3.appendChild(node);
 
-        var ele4 = document.createElement('div'),
-        a = document.createElement('a'),
-        node = document.createTextNode(currentPost.time),
-        img = document.createElement('img');
-        ele4.className = 'card-action';
-        // node.textContent = currentPost.time;
-        img.src = "images/" + currentPost.socMedia + ".png";
-        a.href = "http://www.facebook.com";
-        a.appendChild(img);
-        a.appendChild(node);
-        ele4.appendChild(a);
+        // if (currentPost.socMedia !== 'instagram') NOTE: Stubbed out for instagram support.
 
-        ele1.appendChild(ele2);
-        ele2.appendChild(ele3);
-        ele1.appendChild(ele4);
-        cardStream.appendChild(ele1);
+            var ele1 = document.createElement('div');
+            ele1.setAttribute('class', 'card blue-grey darken-1');
 
-        
-        // ele4.setAttribute('class', 'card-action');
-        // var ele5 = document.createElement('a');
+            var ele2 = document.createElement('div');
+            ele2.setAttribute('class', 'card-content white-text');
 
-        
-        // ele5.setAttribute('href', 'http://www.twitter.com');
-        // ele5.setAttribute('src', 'js/fb_30.png');
-        // ele5.setAttribute('innerText', 'test link text');
+            var ele3 = document.createElement('p');
+            var node = document.createTextNode(currentPost.content);
+            ele3.appendChild(node);
 
+            var ele4 = document.createElement('div'),
+                a = document.createElement('a'),
+                date = document.createTextNode(currentPost.time),
+                logo = document.createElement('img');
+            ele4.className = 'card-action';
+            logo.src = "images/" + currentPost.socMedia + ".png";
+            a.href = "http://www.facebook.com";
+            a.appendChild(logo);
+            a.appendChild(date);
+            ele4.appendChild(a);
 
-        // var ele5 = document.createElement('a');
-        // ele5.setAttribute('id', i + '.5');
-        // ele5.setAttribute( 'src', 'images/twitter_30.png');
-        
-        // Render to DOM in proper order
+            ele1.appendChild(ele2);
+            ele2.appendChild(ele3);
+            ele1.appendChild(ele4);
+            cardStream.appendChild(ele1);
 
-        
+        // } else { NOTE: stubbed out for instagram support.
+
+            // var ele1 = document.createElement('div');
+            // ele1.setAttribute('class', 'card horizontal');
+
+            // var ele2 = document.createElement('div'),
+            //     img = document.createElement('img');
+            // ele2.className = 'card-image';
+            // img.src = currentPost.image;
+            // ele2.appendChild(img);
+
+            // var ele3 = document.createElement('div');
+            // ele3.className = 'card-stacked';
+
+            // var ele4 = document.createElement('div');
+            // ele4.className = 'card-content';
+
+            // var ele5 = document.createElement('p');
+            // var node = document.createTextNode(currentPost.content);
+            // ele5.appendChild(node);
+
+            // var ele6 = document.createElement('div'),
+            //     a = document.createElement('a'),
+            //     date = document.createTextNode(currentPost.time),
+            //     logo = document.createElement('img');
+            // ele6.className = 'card-action';
+            // logo.src = "images/" + currentPost.socMedia + ".png";
+            // a.href = "http://www." + currentPost.socMedia + ".com";
+            // a.appendChild(logo);
+            // a.appendChild(date);
+            // ele6.appendChild(a);
+
+            // ele1.appendChild(ele2);
+            // ele1.appendChild(ele3);
+            // ele4.appendChild(ele3);
+            // ele6.appendChild(ele4);
+            // cardStream.appendChild(ele1);
+
+        }
 
     }
-}
+
 
 
 User.prototype.saveLogin = function () {
@@ -88,6 +108,7 @@ function Post(content, socMedia) {
     this.content = content;
     this.socMedia = socMedia;
     this.time = new Date().getTime();
-    
+    // this.image = image;
+
 }
 

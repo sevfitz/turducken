@@ -4866,7 +4866,7 @@ small {
 }
 
 .card-action {
-  height: 30px; width: 100%; margin: 0px; padding-bottom: 0px; font-size: 10px; text-align: right; display: inline-block; vertical-align: middle;
+  height: 30px; width: 100%; margin: 0px; padding: 0px; font-size: 10px; text-align: right; display: inline-block; vertical-align: middle;
 }
 
 .card .card-reveal {
