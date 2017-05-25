@@ -37,19 +37,6 @@ if (twitterBut) {
     });
 }
 
-<<<<<<< HEAD
-function saveToStorage(post) {
-    localStorage.setItem('tweet', JSON.stringify(post));
-}
-
-
-var tweet = JSON.parse(localStorage.getItem('tweet'));
-console.log(bensonwigglepuff + ' is here');
-bensonwigglepuff.posts.push(new Post(tweet, 'Twitter'));
-
-// End of Fake Twitter Section
-=======
 var tweet = JSON.parse(localStorage.getItem('twitter'));
 console.log(bensonwigglepuff,'is here');
 bensonwigglepuff.posts.push(new Post(tweet, 'twitter'));
->>>>>>> c161a838482dcf32f526f73ab435434503b580b6
