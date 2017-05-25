@@ -1,8 +1,36 @@
 img {
     display: block;
-    width: 50%;
+    max-width: 85%;
+    max-height: 500px;
     margin: 0 auto;
-    
+  /* this code is from codePen https://codepen.io/chris22smith/pen/PbBwjp */
+    border:solid 2px;
+    border-bottom-color: grey;
+    border-left-color:grey;
+    border-right-color:grey;
+    border-top-color:lightgrey;   
+}
+
+#frame {
+ background-color:#ddc;
+  border:solid 5vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:inline-block;
+  margin:0 auto;
+  height:80vh;
+  padding:8vmin;
+  /*position:relative;*/
+  text-align:center;
+}
+
+#frameStuff {
+    text-align: center;
 }
 
 #team {
@@ -13,4 +41,19 @@ img {
 .member {
     width: 25%;
     padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+
+}
+h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
 }
