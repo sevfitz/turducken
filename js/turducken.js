@@ -1,10 +1,15 @@
 'use strict';
 
-// TODO: figure out the max of 14 post objects in the posts array
-// TODO: check on the order--something weird going on.
+function pushToLocalStorage( user ) {
+    var userString = JSON.stringify( user );
+    localStorage.setItem('user', userString);
+    // console.log('pushed ' + userString);
+}
 
-function saveToStorage(assocSM, post) {
-    localStorage.setItem(assocSM, JSON.stringify(post));
+function getFromLocalStorage( ) {
+    var userString = localStorage.getItem('user');
+    var user = JSON.parse(userString);
+    return user;
 }
 
 // Create a new Post from the dashboard
@@ -15,16 +20,14 @@ var turbuttonEl = document.getElementById('turbutton');
 
 if (turbuttonEl) {
     turbuttonEl.addEventListener('click', function(){
-        saveToStorage(smSelectEl.value,turPostEl.value);
+        event.preventDefault();
+        var socMed = smSelectEl.value;
+        var postText = turPostEl.value;
+
+        bensonwigglepuff.newPost(postText, socMed);
     });
 }
 
-if (smSelectEl) {
-    var socMed = smSelectEl.value;
-    var postText = JSON.parse(localStorage.getItem(smSelectEl.value));
-}
-
-bensonwigglepuff.posts.push(new Post(postText, socMed));
 
 // Create a tweet from fake-social-media.html
 
@@ -33,10 +36,9 @@ var twitterBut = document.getElementById('twitterBut');
 
 if (twitterBut) {
     twitterBut.addEventListener('click', function(){
-        saveToStorage('twitter', tweetEl.value);
+        event.preventDefault();
+        var tweet = tweetEl.value;
+        bensonwigglepuff.newPost(tweet, 'twitter');
     });
 }
 
-var tweet = JSON.parse(localStorage.getItem('twitter'));
-console.log(bensonwigglepuff,'is here');
-bensonwigglepuff.posts.push(new Post(tweet, 'twitter'));
