@@ -1,53 +1,30 @@
-"use strict";
+'use strict';
 
-function User( fName, lName) {
-    this.fName = fName;
-    this.lName = lName;
-    //this.img = img; //need to add images and urls...
-    this.posts = [];
+// var whatever = document.getElementById("login-form");
+// whatever.addEventListener("submit", init());
+
+// var anotherone = document.getElementById(" ")
+
+// var bensonwigglepuff = new User('Benson', 'WigglePuff');
+
+// Start of Fake Twitter Section
+
+var tweetEl = document.getElementById('textArea');
+
+var twitterBut = document.getElementById('twitterBut');
+if (twitterBut) {
+    twitterBut.addEventListener('click', function(){
+        saveToStorage(tweetEl.value);
+    });
 }
 
-User.prototype.newPost = function( content, socMedia ) {
-    this.posts.push( new Post( content, socMedia ));
-    pushToLocalStorage( this );
-}
-
-
-User.prototype.render = function() {
-    console.table( this.posts );
-}
-
-function Post( content, socMedia ){
-    this.content = content;
-    this.socMedia = socMedia;
-    this.time = new Date().getTime();
-}
-
-function pushToLocalStorage( user ) {
-    var userString = JSON.stringify( user );
-    localStorage.setItem('user', userString);
-    console.log("pushed " + userString);
-}
-
-function getFromLocalStorage( ) {
-    var userString = localStorage.getItem('user');
-
-    var user = JSON.parse(userString);
-
-    if ( user ){
-        console.log( user.posts);
-    };
+function saveToStorage(post) {
+    localStorage.setItem('tweet', JSON.stringify(post));
 }
 
 
-function init(){
-    populate();
-    bensonwigglepuff.render();
-    pushToLocalStorage( bensonwigglepuff );
-    getFromLocalStorage( bensonwigglepuff );
-}
+var tweet = JSON.parse(localStorage.getItem('tweet'));
+console.log(bensonwigglepuff,'is here');
+bensonwigglepuff.posts.push(new Post(tweet, 'Twitter'));
 
-var whatever = document.getElementById("login-form");
-whatever.addEventListener("submit", init);
-
-var anotherone = document.getElementById(" ")
+// End of Fake Twitter Section
