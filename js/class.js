@@ -18,8 +18,12 @@ User.prototype.newPost = function (content, socMedia) {
 };
 
 User.prototype.render = function () {
-
     var cardStream = document.getElementById('cards-container');
+    if (!cardStream) {
+        return;
+    }
+    cardStream.innerHTML = '';
+
     var currentUser = this;
 
 

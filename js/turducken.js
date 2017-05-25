@@ -3,12 +3,12 @@
 var userData = getFromLocalStorage();
 var activeUser = new User(userData.fName, userData.lName, userData.uName, userData.uPass, userData.img);
 
-
 userData.posts.forEach(function (whatever) {
     var postData = new Post(whatever.content, whatever.socMedia, whatever.time);
     activeUser.posts.push(postData);
 });
 
+activeUser.render();
 
 
 // On Dashboard
@@ -24,7 +24,8 @@ if (turbuttonEl) {
         var socMed = smSelectEl.value;
         var postText = turPostEl.value;
 
-        bensonwigglepuff.newPost(postText, socMed);
+        activeUser.newPost(postText, socMed);
+        activeUser.render();
     });
 }
 
@@ -38,7 +39,8 @@ if (twitterBut) {
     twitterBut.addEventListener('click', function () {
         event.preventDefault();
         var tweet = tweetEl.value;
-        bensonwigglepuff.newPost(tweet, 'twitter');
+        activeUser.newPost(tweet, 'twitter');
+        activeUser.render();
     });
 }
 
