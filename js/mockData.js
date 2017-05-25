@@ -37,7 +37,7 @@ function populatePosts( ) {
 function pushToLocalStorage( user ) {
     var userString = JSON.stringify( user );
     localStorage.setItem('user', userString);
-    console.log('pushed ' + userString);
+    // console.log('pushed ' + userString);
 }
 
 function getFromLocalStorage( ) {
@@ -46,7 +46,7 @@ function getFromLocalStorage( ) {
     var user = JSON.parse(userString);
 
     if ( user ){
-        console.log( user.posts);
+        // console.log( user.posts);
     };
 }
 
