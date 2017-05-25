@@ -1,8 +1,19 @@
-"use strict"
+'use strict';
 
-var bensonwigglepuff = new User('Benson', 'WigglePuff');
+// TODO: Only populate posts the first time--not every time they log in
 
-function populate( ) {
+
+var testUser = new User('First','Last','testuName','testuPass','../images/cartoon-hedgehog.jpg');
+var bensonwigglepuff = new User('Benson', 'Wigglepuff', 'boogie', 'jjboogz', '../images/bw.jpg' );
+
+function init(){
+    populatePosts();
+    bensonwigglepuff.render();
+    pushToLocalStorage( bensonwigglepuff );
+    getFromLocalStorage( bensonwigglepuff );
+}
+
+function populatePosts( ) {
     // POSTS THAT WILL APPEAR IN STREAM \\
 
     bensonwigglepuff.posts.push( new Post('Sometimes I have an existential crisis when making a sandwich because isn’t life just a giant sandwich?','twitter'));
@@ -22,3 +33,21 @@ function populate( ) {
     bensonwigglepuff.posts.push( new Post('Today in class we learned about local storage and it totally blew my mind. Learning how to code in general is so eye opening and I think everyone should give it a shot to see if it’s a path they might want to pursue!', 'facebook'));
     bensonwigglepuff.posts.push( new Post('Tfw Code Fellows PDX is the best place ever.',  'twitter'));
 }
+
+function pushToLocalStorage( user ) {
+    var userString = JSON.stringify( user );
+    localStorage.setItem('user', userString);
+    console.log('pushed ' + userString);
+}
+
+function getFromLocalStorage( ) {
+    var userString = localStorage.getItem('user');
+
+    var user = JSON.parse(userString);
+
+    if ( user ){
+        console.log( user.posts);
+    };
+}
+
+init();
