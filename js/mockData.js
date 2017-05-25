@@ -7,8 +7,9 @@ var testUser = new User('First','Last','testuName','testuPass','../images/cartoo
 var bensonwigglepuff = new User('Benson', 'Wigglepuff', 'boogie', 'jjboogz', '../images/bw.jpg' );
 
 function init(){
+    console.log('running init function right now');
     populatePosts();
-    bensonwigglepuff.render();
+    // bensonwigglepuff.render();
     pushToLocalStorage( bensonwigglepuff );
     getFromLocalStorage( bensonwigglepuff );
 }
