@@ -13,6 +13,8 @@ function User(fName, lName, uName, uPass, img) {
 User.prototype.newPost = function (content, socMedia) {
     this.posts.push(new Post(content, socMedia));
     pushToLocalStorage(this);
+    console.log('new post');
+    console.table(this);
 };
 
 
