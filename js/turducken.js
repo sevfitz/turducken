@@ -1,17 +1,17 @@
 'use strict';
 
-function pushToLocalStorage( user ) {
-    var userString = JSON.stringify( user );
-    localStorage.setItem('user', userString);
-    // console.log('pushed ' + userString);
-}
+var userData = getFromLocalStorage();
+var activeUser = new User(userData.fName, userData.lName, userData.uName, userData.uPass, userData.img);
 
-function getFromLocalStorage( ) {
-    var userString = localStorage.getItem('user');
-    var user = JSON.parse(userString);
-    return user;
-}
+userData.posts.forEach(function (whatever) {
+    var postData = new Post(whatever.content, whatever.socMedia, whatever.time);
+    activeUser.posts.push(postData);
+});
 
+activeUser.render();
+
+
+// On Dashboard
 // Create a new Post from the dashboard
 
 var turPostEl = document.getElementById('turTextArea');
@@ -19,12 +19,13 @@ var smSelectEl = document.getElementById('sm-select');
 var turbuttonEl = document.getElementById('turbutton');
 
 if (turbuttonEl) {
-    turbuttonEl.addEventListener('click', function(){
+    turbuttonEl.addEventListener('click', function () {
         event.preventDefault();
         var socMed = smSelectEl.value;
         var postText = turPostEl.value;
 
-        bensonwigglepuff.newPost(postText, socMed);
+        activeUser.newPost(postText, socMed);
+        activeUser.render();
     });
 }
 
@@ -35,10 +36,11 @@ var tweetEl = document.getElementById('twitextArea');
 var twitterBut = document.getElementById('twitterBut');
 
 if (twitterBut) {
-    twitterBut.addEventListener('click', function(){
+    twitterBut.addEventListener('click', function () {
         event.preventDefault();
         var tweet = tweetEl.value;
-        bensonwigglepuff.newPost(tweet, 'twitter');
+        activeUser.newPost(tweet, 'twitter');
+        activeUser.render();
     });
 }
 
