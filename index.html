@@ -17,9 +17,9 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="nav">
         <ul>
-            <li>(Turducken Logo)</li>
+            <li><img src = "images/turducken_logo_150.png" style =  "max-height: 50px; vertical-align: middle"></li>
             <li>Profile</li>
             <li>Settings</li>
             <li>Logout</li>
@@ -34,7 +34,7 @@
             </section>
             <!-- End of dash-bio-section -->
             <section id="form-wrapper">
-                <form action="" method="POST">
+                <form id="new-post" action="" method="POST">
                     <fieldset>
                         <legend>New Post</legend>
                         <label for=""></label>
@@ -45,7 +45,7 @@
                         </select>
                         <label for="content">Post Content: </label>
                         <textarea name="content" id="turTextArea" cols="50" rows="10" spellcheck="true" placeholder="Write your new post content here."></textarea>
-                        <input id="turbutton" type="submit">
+                        <input id="turbutton" type="submit" class="waves-effect waves-light btn">
                     </fieldset>
                 </form>
             </section>
@@ -61,7 +61,7 @@
     </section>
 
     <!-- Modal Trigger -->
-    <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+    <!--<a class="waves-effect waves-light btn" href="#modal1">Modal</a>-->
 
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
