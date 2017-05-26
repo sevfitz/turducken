@@ -27,8 +27,6 @@ User.prototype.render = function () {
     for (var i = currentUser.posts.length - 1; i >= 0 ; i--) {
         var currentPost = currentUser.posts[i];
 
-        // if (currentPost.socMedia !== 'instagram') NOTE: Stubbed out for instagram support.
-
         var ele1 = document.createElement('div');
         ele1.setAttribute('class', 'card blue-grey darken-1');
 
