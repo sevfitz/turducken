@@ -1,3 +1,12 @@
+.dark-primary-color    { background: #0097A7; }
+.default-primary-color { background: #00BCD4; }
+.light-primary-color   { background: #B2EBF2; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #795548; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
 html, body {
     font-family: arial;
     margin: 0 2%;
@@ -28,6 +37,7 @@ li {
     order: 1;
     margin: 0px;
     padding: none;
+    /*background-color: #bdbdbd;*/
 }
 
 #cards-container {
@@ -39,7 +49,10 @@ li {
     height: 200px;
     width: 100%;
     border: none;
-    margin: 0 0 20% 0;
+    margin: 4px 0 20% 0;
+    text-align: center;
+    padding-top: 2px;
+    background-color: #B1EAF1;
 }
 
 #login-form {
@@ -62,7 +75,7 @@ fieldset {
 #new-post { 
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-    background-color: grey;
+    background-color: #bdbdbd;
 }
 
 #new-post legend {
@@ -74,17 +87,21 @@ fieldset {
     margin: 5% 5%;
 }
 
-nav {
+
+/*nav {
     border: none;
-}
+    
+
+}*/
 
 nav ul, footer ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     /*border: solid 1px black;*/
     height: 15%;
-    width: 100%;
+    width: 30%;
+    margin-left: 20px;
 }
 
 main {
@@ -104,4 +121,10 @@ main {
     height: 30px;
     margin: 0px;
     padding: 0px;
+}
+
+#form-wrapper {
+
+    margin-top: 60%;
+    
 }
