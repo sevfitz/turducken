@@ -13,8 +13,6 @@ function User(fName, lName, uName, uPass, img) {
 User.prototype.newPost = function (content, socMedia) {
     this.posts.push(new Post(content, socMedia));
     pushToLocalStorage(this);
-    console.log('new post');
-    console.table(this);
 };
 
 User.prototype.render = function () {
@@ -25,11 +23,9 @@ User.prototype.render = function () {
     cardStream.innerHTML = '';
 
     var currentUser = this;
-
-
-    for (var i = 0; i < currentUser.posts.length; i++) {
-
-        var currentPost = this.posts[i];
+    
+    for (var i = currentUser.posts.length - 1; i >= 0 ; i--) {
+        var currentPost = currentUser.posts[i];
 
         // if (currentPost.socMedia !== 'instagram') NOTE: Stubbed out for instagram support.
 
@@ -99,7 +95,7 @@ User.prototype.render = function () {
 
     }
 
-}
+};
 
 
 
