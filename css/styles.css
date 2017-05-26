@@ -150,3 +150,7 @@ margin: auto;
 
 }
 
+#turTextArea {
+    background-color: white;
+    border-radius: 5px;
+}
