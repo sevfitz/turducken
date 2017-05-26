@@ -102,10 +102,22 @@ User.prototype.render = function () {
 }
 
 
+
+
+function formatDate(date) {
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var localTime = date.toTimeString();
+    var postTime = localTime.slice( 0, (localTime.length - 18) );
+    var formattedDate = date.getUTCDate() + ' ' + months[date.getUTCMonth()] + ' ' + date.getUTCFullYear() + '  ' + postTime;
+    return formattedDate;
+}
+
+var postDate = new Date();
+
 function Post(content, socMedia, time) {
     this.content = content;
     this.socMedia = socMedia;
-    this.time = time || new Date().getTime();
+    this.time = time || formatDate(postDate);
     // this.image = image;
 
 }
