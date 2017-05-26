@@ -3,14 +3,11 @@
 
 function init(){
     if (!getFromLocalStorage()) {
-        // var testUser = new User('First','Last','testuName','testuPass','../images/cartoon-hedgehog.jpg');
         console.log('creating user for the first time');
         var boo = createUser();
         pushToLocalStorage( boo );     
     }
-    // console.log('running init function right now');
-    // // bensonwigglepuff.render();
-    // getFromLocalStorage();
+
 }
 
 function createUser( ) {

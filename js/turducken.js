@@ -44,3 +44,8 @@ if (twitterBut) {
     });
 }
 
+$('#impaired').on('click', function(){
+    $('#form-wrapper').toggle();
+    $('#form-wrapper').delay(15000).fadeIn(300);
+})
+
