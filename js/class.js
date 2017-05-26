@@ -23,8 +23,8 @@ User.prototype.render = function () {
     cardStream.innerHTML = '';
 
     var currentUser = this;
-    
-    for (var i = currentUser.posts.length - 1; i >= 0 ; i--) {
+
+    for (var i = currentUser.posts.length - 1; i >= 0; i--) {
         var currentPost = currentUser.posts[i];
 
         // if (currentPost.socMedia !== 'instagram') NOTE: Stubbed out for instagram support.
@@ -44,9 +44,13 @@ User.prototype.render = function () {
             date = document.createTextNode(currentPost.time),
             logo = document.createElement('img');
         ele4.className = 'card-action';
+        // ele4.style = "display: flex";
         logo.src = "images/" + currentPost.socMedia + ".png";
+        // logo.style = "justify-content: flex-end";
+        // date.style = "margin: auto";
+        // a.style = "margin: auto";
         a.href = "http://www.facebook.com";
-        
+
         a.appendChild(logo);
         a.appendChild(date);
         ele4.appendChild(a);
@@ -104,7 +108,7 @@ User.prototype.render = function () {
 function formatDate(date) {
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     var localTime = date.toTimeString();
-    var postTime = localTime.slice( 0, (localTime.length - 18) );
+    var postTime = localTime.slice(0, (localTime.length - 18));
     var formattedDate = date.getUTCDate() + ' ' + months[date.getUTCMonth()] + ' ' + date.getUTCFullYear() + '  ' + postTime;
     return formattedDate;
 }
