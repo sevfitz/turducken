@@ -1,12 +1,35 @@
+* {
+    background-color: #edeff2;
+}
+
+#twitterlogo {
+    max-height: 70px;
+    max-width: 70px;
+}
+
 h1 {
     text-align: center;
     margin: 20px;
     padding: 30px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
 }
 
-img {
+h2, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+
+    font-family: 'Raleway', sans-serif;
+}
+
+#bensonW {
     width: 100%;
+    border-radius: 20px;
+}
+
+#verified {
+   width: 10%;   
 }
 
 .prePosts {
@@ -14,10 +37,13 @@ img {
     float: right;
 }
 
-p {
+.tweets {
     border: black solid;
     padding: 15px;
+    margin: 20px;
     font-family: 'Raleway', sans-serif;
+    background-color: white;
+    border-radius: 20px;
 
 
 }
@@ -25,5 +51,9 @@ p {
 .imgAndText {
     float: left;
     width: 30%;
+}
+
+form {
+    font-family: 'Raleway', sans-serif;
 }
 
