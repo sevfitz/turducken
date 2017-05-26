@@ -4847,8 +4847,18 @@ small {
 .card .card-action {
   position: relative;
   background-color: inherit;
-  border-top: 1px solid rgba(160, 160, 160, 0.2);
-  /*padding: 5px;*/
+  border-top: 1px solid #B1EAF1;
+  height: 30px;
+}
+
+.card-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-action a {
+  display: flex;
+  align-items: center;
 }
 
 .card .card-action:last-child {
@@ -4859,15 +4869,24 @@ small {
   color: #ffab40;
   margin-right: 24px;
   transition: color .3s ease;
-  text-transform: uppercase;
+  font-size: 8px;
+  margin-right: 5px;
+  padding: 10px;
+  /*text-transform: uppercase;*/
+  
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
   color: #ffd8a6;
-}
+    
+  }
 
-.card-action {
-  height: 30px; width: 100%; margin-bottom: 10px; padding-bottom: 10px; font-size: 10px; text-align: right; display: relative;
+ #card-action-logo #card-action-date #card-action-a {
+ margin: auto;
+ justify-content:flex-end;
+ /*height: 30px; width: 100%; margin-bottom: 10px; padding-bottom: 10px; font-size: 10px; text-align: right; display: relative;*/
+/*}*/
+
 }
 
 .card .card-reveal {
@@ -5181,7 +5200,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #0097A7;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
