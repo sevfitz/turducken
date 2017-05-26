@@ -46,6 +46,7 @@ User.prototype.render = function () {
         ele4.className = 'card-action';
         logo.src = "images/" + currentPost.socMedia + ".png";
         a.href = "http://www.facebook.com";
+        
         a.appendChild(logo);
         a.appendChild(date);
         ele4.appendChild(a);

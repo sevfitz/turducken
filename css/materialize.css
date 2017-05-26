@@ -2011,7 +2011,7 @@
 }
 
 .blue-grey.darken-1 {
- background-color: #546e7a !important;
+ background-color: #0097A7 !important;
   max-height: 200;
 }
 
@@ -4191,7 +4191,7 @@ nav ul a span.badge {
 
 nav {
   color: #fff;
-  background-color: #ee6e73;
+  background-color: #795548;
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -4867,7 +4867,7 @@ small {
 }
 
 .card-action {
-  height: 30px; width: 100%; margin: 0px; padding: 0px; font-size: 10px; text-align: right; display: inline-block; vertical-align: middle;
+  height: 30px; width: 100%; margin-bottom: 10px; padding-bottom: 10px; font-size: 10px; text-align: right; display: relative;
 }
 
 .card .card-reveal {
