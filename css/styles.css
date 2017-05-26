@@ -57,14 +57,14 @@ li {
 
 #login-form {
     height: 600px;
-    width: 200px;
-    margin: 40% 40%;
+    width: 350px;
+    margin: 0 auto;
 }
 
 #login-form fieldset {
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    margin: 0px 20%;
     border: none;
 }
 
@@ -127,4 +127,11 @@ main {
 
     margin-top: 60%;
     
+}
+
+#logo-container {
+    height: 115px;
+    width: 171px;
+    background-image: url("../images/logo.png");
+    margin: 10% auto 3% auto;
 }
