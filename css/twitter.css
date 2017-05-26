@@ -2,6 +2,7 @@ h1 {
     text-align: center;
     margin: 20px;
     padding: 30px;
+    font-family: 'Playfair Display', serif;
 }
 
 img {
@@ -16,6 +17,8 @@ img {
 p {
     border: black solid;
     padding: 15px;
+    font-family: 'Raleway', sans-serif;
+
 
 }
 
