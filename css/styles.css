@@ -94,13 +94,21 @@ fieldset {
 
 }*/
 
-nav ul, footer ul {
+nav ul {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    /*border: solid 1px black;*/
     height: 15%;
     width: 30%;
+    margin-left: 20px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 15%;
+    width: 50%;
     margin-left: 20px;
 }
 
@@ -121,6 +129,7 @@ main {
     height: 30px;
     margin: 0px;
     padding: 0px;
+
 }
 
 #form-wrapper {
@@ -135,3 +144,9 @@ main {
     background-image: url("../images/logo.png");
     margin: 10% auto 3% auto;
 }
+
+#login-button {
+margin: auto;
+
+}
+
