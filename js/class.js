@@ -34,8 +34,8 @@ User.prototype.render = function () {
         ele2.setAttribute('class', 'card-content white-text');
 
         var ele3 = document.createElement('p');
-        var node = document.createTextNode(currentPost.content);
-        ele3.appendChild(node);
+        // var node = document.createTextNode(currentPost.content);
+        ele3.innerHTML = currentPost.content;
 
         var ele4 = document.createElement('div'),
             a = document.createElement('a'),
