@@ -16,7 +16,7 @@ function init(){
 function createUser( ) {
     // POSTS THAT WILL APPEAR IN STREAM \\
     var bensonwigglepuff = new User('Benson', 'Wigglepuff', 'boogie', 'jjboogz', '../images/bw.jpg' );
-    bensonwigglepuff.posts.push( new Post('Sometimes I have an existential crisis when making a sandwich because isn’t life just a giant sandwich?','twitter'), '12 Mar 2017  12:01' );
+    bensonwigglepuff.posts.push( new Post('Sometimes I have an existential crisis when making a sandwich because isn’t life just a giant sandwich?','twitter', '12 Mar 2017  12:01' ));
     bensonwigglepuff.posts.push( new Post('https://static.independent.co.uk/s3fs-public/styles/story_medium/public/thumbnails/image/2015/11/30/19/puggle.jpg', 'instagram', '13 Mar 2017  14:41' ));
     bensonwigglepuff.posts.push( new Post('I ate an entire jar of mayonnaise and I don’t feel so good.  Mom said that eating a jar of mayonnaise isn’t okay but she doesn’t get it.', 'facebook', '28 Mar 2017  16:56' ));
     bensonwigglepuff.posts.push( new Post('You guys, I just made the best breakfast ever. It was super simple, you can make it with your kids and you’ll look like a superstar. Here’s the recipe: http://www.foodnetwork.com/recipes/ree-drummond/perfect-french-fries-recipe2-2120420', 'facebook', '02 Apr 2017  09:01' ));
