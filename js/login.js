@@ -43,7 +43,7 @@ var checkLogin = function() {
     var saveduPass = user.uPass;
     var loginFormEl = document.getElementById('login-form');
 
-    if ( !saveduName || !saveduPass ) {
+    if ( !uNameEl.value || !uPassEl.value ) {
         alert('Please enter a valid username or password.');
         uNameEl.value = '';
         uPassEl.value = '';
