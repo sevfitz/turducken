@@ -76,19 +76,12 @@ if (uNameEl) {
     uNameEl.addEventListener( 'blur', function () {
         noSpace( uNameEl );
     });
-}
-if (uPassEl) {
+
     uPassEl.addEventListener( 'blur', function () {
         noSpace( uPassEl );
     });
-}
-if (buttonEl) {
-    buttonEl.addEventListener( 'click', function () {
-        checkLogin();
-    });
-}
-if (buttonEl) {
-    buttonEl.addEventListener( 'enter', function () {
+
+    buttonEl.addEventListener( 'click' || 'enter', function () {
         checkLogin();
     });
 }
